@@ -5,6 +5,7 @@ using Unity.Services.Core;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+//init
 namespace Game
 {
     public class init : MonoBehaviour
