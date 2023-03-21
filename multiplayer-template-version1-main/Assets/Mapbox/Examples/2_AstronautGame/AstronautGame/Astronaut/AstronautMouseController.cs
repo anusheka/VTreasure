@@ -60,21 +60,14 @@ namespace Mapbox.Examples
 
 			if (Input.GetMouseButtonDown(0))
 			{
-                Debug.Log("\n\nMouse down");
-                clicktime = Time.time;
+				clicktime = Time.time;
 			}
 			if (Input.GetMouseButtonUp(0))
 			{
-                Debug.Log("Mouse up");
-                if (Time.time - clicktime < 0.15f)
+				if (Time.time - clicktime < 0.15f)
 				{
 					click = true;
-                    Debug.Log("That's a click");
-                }
-                else
-                {
-                    Debug.Log("Sorry, that's not a click");
-                }
+				}
 			}
 
 			if (click)
