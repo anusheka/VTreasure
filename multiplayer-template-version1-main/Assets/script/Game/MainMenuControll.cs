@@ -55,7 +55,7 @@ namespace Game
             Debug.Log(code);
             if (succeeded)
             {
-                SceneManager.LoadScene("Lobby");
+                SceneManager.LoadScene("LocationBasedGame");
             }
         }
     }

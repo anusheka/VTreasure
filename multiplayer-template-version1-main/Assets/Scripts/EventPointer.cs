@@ -3,7 +3,9 @@ using System.Collections.Generic;
 
 // Mapbox library
 using UnityEngine;
+using UnityEngine.UI;
 using Mapbox.Examples; // this is for calculating the distance between player and POI
+using Mapbox.Examples.Scripts; // this is for calculating the distance between player and POI
 using Mapbox.Utils; // this is for calculating the distance between player and POI
 
 

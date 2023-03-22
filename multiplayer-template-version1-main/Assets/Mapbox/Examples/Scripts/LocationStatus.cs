@@ -14,6 +14,9 @@
 		Text _statusText;
 
 		private AbstractLocationProvider _locationProvider = null;
+        Location currLoc; // I made this a field
+
+
 		void Start()
 		{
 			if (null == _locationProvider)
@@ -51,5 +54,17 @@
 			}
 
 		}
+
+		 // these are two custom methods that give us the location on the canvas
+        public double GetLocationLat()
+        {
+            return currLoc.LatitudeLongitude.x;
+
+        }
+        public double GetLocationLong()
+        {
+            return currLoc.LatitudeLongitude.y;
+
+        }
 	}
 }
