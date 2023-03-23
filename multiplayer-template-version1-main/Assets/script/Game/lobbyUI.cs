@@ -8,7 +8,7 @@ using UnityEngine;
 using UnityEngine.UI;
 namespace Game
 {
-    public class LobbyUI : MonoBehaviour
+    public class lobbyUI : MonoBehaviour
     {
         [SerializeField] private TextMeshProUGUI _lobbyCodeText;
         [SerializeField] private Button _startButton;
