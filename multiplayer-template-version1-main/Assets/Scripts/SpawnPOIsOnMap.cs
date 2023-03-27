@@ -62,6 +62,7 @@ namespace Mapbox.Examples
                 instance.transform.localPosition = _map.GeoToWorldPosition(POIList[i].Location, true);
                 instance.transform.localScale = new Vector3(_spawnScale, _spawnScale, _spawnScale);
                 _spawnedObjects.Add(instance);
+                
             }
         }
 
@@ -97,11 +98,18 @@ namespace Mapbox.Examples
             
                 string latitude = data[1];
                 string longitude = data[2];
+
+                string hint1 = data[3];
+                Debug.Log("hint1: " + hint1);
+                string hint2 = data[4];
+                string hint3 = data[5];
                 string status = "";
-                tempPOIList.Add(new GeoCoordinate(name, Conversions.StringToLatLon(latitude +", "+longitude), status) ); // creates a geocoord object and adds to list
+                tempPOIList.Add(new GeoCoordinate(name, Conversions.StringToLatLon(latitude +", "+longitude), status, hint1, hint2, hint3) ); // creates a geocoord object and adds to list
+                Debug.Log(line);
             }
 
             POIList = tempPOIList.ToArray();
+            Debug.Log(POIList.Length);
         }
 
 

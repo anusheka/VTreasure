@@ -109,7 +109,7 @@ namespace Game
             string allocationId = RelayManager.Instance.GetAllocationId();
             string connectionData = RelayManager.Instance.GetConnectionData();
             await LobbyManager.Instance.UpdatePlayerData(_localLobbyPlayerData.Id, _localLobbyPlayerData.Serialize(), allocationId, connectionData);
-            SceneManager.LoadSceneAsync(_lobbyData.SceneName);
+            SceneManager.LoadSceneAsync("Location-basedGame_backup");
         }
         private async Task<bool> JoinRelayServer(string relayJoinCode)
         {

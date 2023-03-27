@@ -7,7 +7,7 @@ using UnityEngine.UI;
 using Mapbox.Examples; // this is for calculating the distance between player and POI
 using Mapbox.Examples.Scripts; // this is for calculating the distance between player and POI
 using Mapbox.Utils; // this is for calculating the distance between player and POI
-
+using UnityEngine.SceneManagement;
 
 public class EventPointer : MonoBehaviour
 {
@@ -27,7 +27,7 @@ public class EventPointer : MonoBehaviour
 
     public int eventID;
 
-
+    public static int currentEventID;
     // Start is called before the first frame update
     void Start()
     {
@@ -54,12 +54,14 @@ public class EventPointer : MonoBehaviour
         // the LocationStatus script retrieves the player's/user's location
         playerLocation = GameObject.Find("Canvas").GetComponent<LocationStatus>();
 
-        var playerLocationLat = playerLocation.GetLocationLat();
-        var playerLocationLong = playerLocation.GetLocationLong();
-
+        //var playerLocationLat = playerLocation.GetLocationLat();
+        var playerLocationLat = 37.229100403234746;
+        //var playerLocationLong = playerLocation.GetLocationLong();
+        var playerLocationLong = -80.42032154617488;
         // retrieve location of spawned event pointers
         var eventLocationLat = eventPos[0];
         var eventLocationLong = eventPos[1];
+        currentEventID = eventID;
 
         var distance = DistanceBetweenPlaces(playerLocationLat, playerLocationLong, eventLocationLat, eventLocationLong);
         
@@ -72,8 +74,9 @@ public class EventPointer : MonoBehaviour
 
         if (distance < eventManager.getMinimumDistanceToAccess())
         {
-            menuUIManager.HideUserNotInRangePanel();
-            menuUIManager.DisplayEventPanel(eventID); // pass the eventID assigned to this event
+            SceneManager.LoadSceneAsync("Hints");
+            //menuUIManager.HideUserNotInRangePanel();
+            //menuUIManager.DisplayEventPanel(eventID); // pass the eventID assigned to this event
             
         }
         else {

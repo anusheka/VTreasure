@@ -35,7 +35,7 @@ namespace Game
             bool succeeded = await GameLobbyManager.Instance.CreateLobby();
             if (succeeded)
             {
-                SceneManager.LoadScene("Lobby");
+                SceneManager.LoadScene("Location-basedGame_backup");
             }
         }
 
@@ -55,7 +55,7 @@ namespace Game
             Debug.Log(code);
             if (succeeded)
             {
-                SceneManager.LoadScene("LocationBasedGame");
+                SceneManager.LoadScene("Location-basedGame_backup");
             }
         }
     }
