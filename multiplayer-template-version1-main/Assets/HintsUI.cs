@@ -30,6 +30,8 @@ namespace Game
             ReadFile();
             
             _hint1Text.text = POIList[currentHuntID-1].Hint1;
+            _hint2Text.text = POIList[currentHuntID-1].Hint2;
+            _hint3Text.text = POIList[currentHuntID-1].Hint3;
             //currEventID = EventPointer.getEventID;
             Debug.Log("eventID: " + currentHuntID.ToString());
             Debug.Log("assignedHint1: " + POIList[currentHuntID].Hint1);
