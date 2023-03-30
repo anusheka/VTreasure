@@ -81,39 +81,47 @@ namespace Mapbox.Examples
 
         private void ReadFile()
         {
-            List<GeoCoordinate> tempPOIList = new List<GeoCoordinate>();
-
-            // Read each line of the file into a string array. Each element
-            // of the array is one line of the file.
-            string[] lines = System.IO.File.ReadAllLines(@"Assets/Resources/PointsOfInterest.txt");
-
-            // Display the file contents by using a foreach loop.
-     
-       
-            foreach (string line in lines)
+            Debug.Log("DH1 " + "About to start reading file");
+            try
             {
-                string pattern = @",\s*";
-                string[] data = Regex.Split(line, pattern);
-                string name = data[0];
-            
-                string latitude = data[1];
-                string longitude = data[2];
+                List<GeoCoordinate> tempPOIList = new List<GeoCoordinate>();
 
-                string hint1 = data[3];
-                Debug.Log("hint1: " + hint1);
-                string hint2 = data[4];
-                string hint3 = data[5];
-                string status = "";
-                tempPOIList.Add(new GeoCoordinate(name, Conversions.StringToLatLon(latitude +", "+longitude), status, hint1, hint2, hint3) ); // creates a geocoord object and adds to list
-                Debug.Log(line);
+                // Read each line of the file into a string array. Each element
+                // of the array is one line of the file.
+                TextAsset myFile = (TextAsset)Resources.Load("PointsOfInterest");
+                Debug.Log(myFile.ToString());
+                string[] lines = myFile.text.Split("\n");
+                Debug.Log("lines "+lines.Length.ToString());
+                Debug.Log("lines [0]" + lines[0]);
+
+                //string[] lines = System.IO.File.ReadAllLines(@"Assets/Resources/PointsOfInterest.txt");
+
+                // Display the file contents by using a foreach loop.
+
+                Debug.Log("DH1 " + "Reading of POI File started");
+                foreach (string line in lines)
+                {
+                    string pattern = @",\s*";
+                    string[] data = Regex.Split(line, pattern);
+                    string name = data[0];
+
+                    string latitude = data[1];
+                    string longitude = data[2];
+
+                    string hint1 = data[3];
+                    Debug.Log("hint1: " + hint1);
+                    string hint2 = data[4];
+                    string hint3 = data[5];
+
+                    string status = "";
+                    tempPOIList.Add(new GeoCoordinate(name, Conversions.StringToLatLon(latitude + ", " + longitude), status, hint1, hint2, hint3)); // creates a geocoord object and adds to list
+                }
+                POIList = tempPOIList.ToArray();
             }
-
-            POIList = tempPOIList.ToArray();
-            Debug.Log(POIList.Length);
+            catch (System.Exception e) {
+                Debug.Log("DH1 " + "Exception in ReadFile " + e.ToString());
+            }
+            Debug.Log("DH1 "+"Reading of POI File completed");
         }
-
-
-
-
     }
 }

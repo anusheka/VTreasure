@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
-using UnityEngine;
 using Game.Events;
 using GameFramework.Core.Data;
 using System.Text.RegularExpressions;
 using Mapbox.Unity.Utilities;
+
 namespace Game
 {
     public class HintsUI : MonoBehaviour
