@@ -33,9 +33,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Maps/BlueScene.unity
     guid: 7d9cf99a7b47f4949a56d1584144e14d
   - enabled: 1
-    path: Assets/Scenes/Hints 0.unity
-    guid: d453d2bb5b65cfc499f42a4ec37ad9da
-  - enabled: 1
     path: Assets/Scenes/Location-basedGame_backup.unity
     guid: d9b281da295e1bb4aa8c4aea7128f73e
   m_configObjects: {}
