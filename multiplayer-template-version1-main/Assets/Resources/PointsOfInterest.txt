@@ -7,3 +7,4 @@ Sunridge 1, 37.24467644238263, -80.42848176820400, hint1, hint2, hint3
 Sunridge 2, 37.245069730222575, -80.42918373209343, hint1, hint2, hint3
 7-Eleven, 37.242423607863095, -80.42821952953047, hint1, hint2, hint3
 Pylons, 37.229100403234746, -80.42032154617488, Pylons1, Pylons2, Pylons3
+Anusheka's, 37.24576, -80.41895, she's cool, she's here, come find here
