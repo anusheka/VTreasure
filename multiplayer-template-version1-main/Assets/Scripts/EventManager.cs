@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement; // this allows us to load the scene in Activa
 
 public class EventManager : MonoBehaviour
 {
-    double minimumDistanceToAccess = .01;
+    double minimumDistanceToAccess = 100000000000;
 
     // Start is called before the first frame update
     void Start()

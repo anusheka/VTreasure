@@ -55,9 +55,9 @@ public class EventPointer : MonoBehaviour
         playerLocation = GameObject.Find("Canvas").GetComponent<LocationStatus>();
 
         var playerLocationLat = playerLocation.GetLocationLat();
-        //var playerLocationLat = 37.229100403234746;
+        //var playerLocationLat = 37.24576;
         var playerLocationLong = playerLocation.GetLocationLong();
-        //var playerLocationLong = -80.42032154617488;
+        //var playerLocationLong = -80.41895;
         // retrieve location of spawned event pointers
         var eventLocationLat = eventPos[0];
         var eventLocationLong = eventPos[1];

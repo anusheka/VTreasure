@@ -8,15 +8,11 @@ using GameFramework.Core.Data;
 using System.Text.RegularExpressions;
 using Mapbox.Unity.Utilities;
 
-namespace Game
+public class DisplayHint2 : MonoBehaviour
 {
-    public class HintsUI : MonoBehaviour
-    {
+    // Start is called before the first frame update
+    int currentHuntID = EventPointer.currentEventID;
         
-        int currentHuntID = EventPointer.currentEventID;
-        
-        [SerializeField] public TextMeshProUGUI _hint1Text;
-        [SerializeField] public Button _button1;
         [SerializeField] public TextMeshProUGUI _hint2Text;
         [SerializeField] public Button _button2;
         //[SerializeField] public TextMeshProUGUI _hint3Text;
@@ -30,8 +26,7 @@ namespace Game
         void Start()
         {
             ReadFile();
-            _button1.onClick.AddListener(DisplayHint1);
-            _button2.onClick.AddListener(DisplayHint2);
+            _button2.onClick.AddListener(RevealHint2);
             
             
             //_hint1Text.text = POIList[currentHuntID-1].Hint1;
@@ -81,19 +76,9 @@ namespace Game
         {
             
         }
-
-        public void DisplayHint1() 
+        public void RevealHint2() 
         {
             //EventManager.ActivateEvent();
-            _hint1Text.text = POIList[currentHuntID-1].Hint1;
+            _hint2Text.text = POIList[currentHuntID-1].Hint2;
         }
-
-        public void DisplayHint2() 
-        {
-            //EventManager.ActivateEvent();
-            _hint1Text.text = POIList[currentHuntID-1].Hint2;
-        }
-
-    }
-
 }
