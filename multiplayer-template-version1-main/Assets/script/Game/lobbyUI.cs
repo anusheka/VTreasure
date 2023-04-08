@@ -129,7 +129,7 @@ namespace Game
             _startButton.gameObject.SetActive(false);
             _lobbyCodeText.gameObject.SetActive(false);
             _greyBackground.gameObject.SetActive(false);
-            await GameLobbyManager.Instance.StartGame();
+            // await GameLobbyManager.Instance.StartGame();
         }
 
         private void OnScoresButtonClicked()
@@ -140,11 +140,11 @@ namespace Game
             _greyBackground.gameObject.SetActive(true);
             _startButton.gameObject.SetActive(false);
 
-             _scoreText.text = $"{GameLobbyManager.Instance.GetScoreText()}";
+            _scoreText.text = $"{GameLobbyManager.Instance.GetScoreText()}";
 
         }
 
-        private void OnBackButtonClicked()
+        public void OnBackButtonClicked()
         {
             _scoresButton.gameObject.SetActive(true);
             _leaderBoard.gameObject.SetActive(false);

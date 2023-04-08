@@ -19,6 +19,8 @@ namespace Game
         [SerializeField] public Button _button1;
         [SerializeField] public TextMeshProUGUI _hint2Text;
         [SerializeField] public Button _button2;
+        [SerializeField] public Button _backButton;
+        private lobbyUI lobby;
         //[SerializeField] public TextMeshProUGUI _hint3Text;
 
         public static GeoCoordinate[] POIList;
@@ -30,8 +32,9 @@ namespace Game
         void Start()
         {
             ReadFile();
-            // _button1.onClick.AddListener(DisplayHint1);
+            // _button1.onClick.AddListener(DisplayHint1);233
             // _button2.onClick.AddListener(DisplayHint2);
+            _backButton.onClick.AddListener(OnBackButtonClicked);
             
             
             //_hint1Text.text = POIList[currentHuntID-1].Hint1;
@@ -93,6 +96,11 @@ namespace Game
         //     //EventManager.ActivateEvent();
         //     _hint1Text.text = POIList[currentHuntID-1].Hint2;
         // }
+
+        private void OnBackButtonClicked()
+        {
+            // lobby.OnBackButtonClicked();
+        }
 
     }
 
