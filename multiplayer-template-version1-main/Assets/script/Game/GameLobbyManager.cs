@@ -33,6 +33,18 @@ namespace Game
         {
             return LobbyManager.Instance.GetLobbyCode();
         }
+        public string GetScoreText()
+        {
+            string scoreText = "";
+            foreach (LobbyPlayerData player in _lobbyPlayerDatas)
+            {
+                //add player name and score to the string 
+                scoreText += player.GetScore().ToString();
+                // scoreText += player.gamertag;
+                scoreText += "\n";
+            }
+            return scoreText;
+        }
         public async Task<bool> CreateLobby()
         {
             _localLobbyPlayerData = new LobbyPlayerData();

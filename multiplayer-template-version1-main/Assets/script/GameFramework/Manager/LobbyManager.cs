@@ -7,7 +7,7 @@ using Unity.Services.Lobbies;
 using Unity.Services.Lobbies.Models;
 using Unity.VisualScripting;
 using UnityEngine;
-
+using GameFramework.Core.Data;
 namespace GameFramework.Core.GameFramework.Manager
 {
     public class LobbyManager : Singleton<LobbyManager>

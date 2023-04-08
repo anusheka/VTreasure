@@ -11,6 +11,7 @@ namespace Game
     public class lobbyUI : MonoBehaviour
     {
         [SerializeField] private TextMeshProUGUI _lobbyCodeText;
+        [SerializeField] private TextMeshProUGUI _scoreText;
         [SerializeField] private TextMeshProUGUI _leaderBoard;
         [SerializeField] private Button _startButton;
         [SerializeField] private Button _readyButton;
@@ -56,6 +57,7 @@ namespace Game
         void Start()
         {
             _lobbyCodeText.text = $"Lobby code: {GameLobbyManager.Instance.GetLobbyCode()}";
+            // _scoreText.text = $"{GameLobbyManager.Instance.GetScoreText()}";
             if (!GameLobbyManager.Instance.IsHost)
             {
                 _leftButton.gameObject.SetActive(false);
@@ -137,6 +139,8 @@ namespace Game
             _backButton.gameObject.SetActive(true);
             _greyBackground.gameObject.SetActive(true);
             _startButton.gameObject.SetActive(false);
+
+             _scoreText.text = $"{GameLobbyManager.Instance.GetScoreText()}";
 
         }
 

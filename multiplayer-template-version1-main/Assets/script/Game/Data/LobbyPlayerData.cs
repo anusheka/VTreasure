@@ -9,6 +9,8 @@ namespace GameFramework.Core.Data
         private string _gamertag;
         private bool _isReady;
 
+        private int _score;
+
         public string Id => _id;
         public string Gamertag => _gamertag;
 
@@ -18,10 +20,15 @@ namespace GameFramework.Core.Data
             set => _isReady = value;
         }
 
-        public void Initialize(string id, string gamertag)
+        public int GetScore(){
+            return _score;
+        }
+
+        public void Initialize(string id, string gamertag)//, int score)
         {
             _id = id;
             _gamertag = gamertag;
+            _score = 0;
         }
 
         public void Initialize(Dictionary<string, PlayerDataObject> playerData)
@@ -34,6 +41,10 @@ namespace GameFramework.Core.Data
             if (playerData.ContainsKey("Id"))
             {
                 _id = playerData["Id"].Value;
+            }
+            if(playerData.ContainsKey("Score"))
+            {
+                _score++;
             }
             if (playerData.ContainsKey("Gamertag"))
             {
@@ -51,6 +62,7 @@ namespace GameFramework.Core.Data
             {
                 {"Id", _id},
                 {"Gamertag", _gamertag},
+                {"Score", _score.ToString()},
                 {"IsReady", _isReady.ToString()},
                 {"Attibute1", "sadasdsa"}
             };
