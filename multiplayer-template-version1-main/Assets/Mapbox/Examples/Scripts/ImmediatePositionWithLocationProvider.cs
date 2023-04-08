@@ -1,9 +1,15 @@
-﻿namespace Mapbox.Examples
+﻿using System.Collections.Generic;
+using Cinemachine;
+using Game;
+//using Unity.Netcode;
+using UnityEngine;
+
+namespace Mapbox.Examples
 {
 	using Mapbox.Unity.Location;
 	using Mapbox.Unity.Map;
-	using UnityEngine;
-
+	
+	[RequireComponent(typeof(CharacterController))]
 	public class ImmediatePositionWithLocationProvider : MonoBehaviour
 	{
 
@@ -32,11 +38,14 @@
 
 		void LateUpdate()
 		{
+			//if (IsLocalPlayer)
+        	//{
 			if (_isInitialized)
 			{
 				var map = LocationProviderFactory.Instance.mapManager;
 				transform.localPosition = map.GeoToWorldPosition(LocationProvider.CurrentLocation.LatitudeLongitude);
 			}
+			//}
 		}
 	}
 }
