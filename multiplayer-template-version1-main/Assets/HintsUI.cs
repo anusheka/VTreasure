@@ -30,8 +30,8 @@ namespace Game
         void Start()
         {
             ReadFile();
-            _button1.onClick.AddListener(DisplayHint1);
-            _button2.onClick.AddListener(DisplayHint2);
+            // _button1.onClick.AddListener(DisplayHint1);
+            // _button2.onClick.AddListener(DisplayHint2);
             
             
             //_hint1Text.text = POIList[currentHuntID-1].Hint1;
@@ -82,17 +82,17 @@ namespace Game
             
         }
 
-        public void DisplayHint1() 
-        {
-            //EventManager.ActivateEvent();
-            _hint1Text.text = POIList[currentHuntID-1].Hint1;
-        }
+        // public void DisplayHint1() 
+        // {
+        //     //EventManager.ActivateEvent();
+        //     _hint1Text.text = POIList[currentHuntID-1].Hint1;
+        // }
 
-        public void DisplayHint2() 
-        {
-            //EventManager.ActivateEvent();
-            _hint1Text.text = POIList[currentHuntID-1].Hint2;
-        }
+        // public void DisplayHint2() 
+        // {
+        //     //EventManager.ActivateEvent();
+        //     _hint1Text.text = POIList[currentHuntID-1].Hint2;
+        // }
 
     }
 
