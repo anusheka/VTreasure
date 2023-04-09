@@ -66,8 +66,8 @@ public class MenuUIManager : MonoBehaviour
     }
 
     public void CloseButtonClick() {
-        Debug.Log("\n\n\n");
-        Debug.Log("close button clicked");
+        // Debug.Log("\n\n\n");
+        // Debug.Log("close button clicked");
         HideStartEventPanel();
         HideUserNotInRangePanel();
         isUIPanelActive = false;

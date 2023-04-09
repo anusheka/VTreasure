@@ -1,11 +1,3 @@
 Moss Arts Center 1, 37.231453320631964, -80.41770051972695, hint1, hint2, hint3
-Pearson Hall East, 37.23104756139723, -80.41914354842356, hint1, hint2, hint3
-Henderson Hall, 37.23054996947035, -80.41710238752898, hint1, hint2, hint3
-McBryde Hall, 37.23089061050867, -80.42159184068439, hint1, hint2, hint3
-Squires Student Center, 37.22994854279705, -80.41842547622738, hint1, hint2, hint3
-Sunridge 1, 37.24467644238263, -80.42848176820400, hint1, hint2, hint3
-Sunridge 2, 37.245069730222575, -80.42918373209343, hint1, hint2, hint3
-7-Eleven, 37.242423607863095, -80.42821952953047, hint1, hint2, hint3
-Pylons, 37.229100403234746, -80.42032154617488, Pylons1, Pylons2, Pylons3
 Anusheka's, 37.24576, -80.41895, she's cool, she's here, come find her
 Panera, 37.23337, -80.43320, bread, bread, bread 

@@ -9,19 +9,19 @@ EditorBuildSettings:
     path: Assets/Scenes/initScene.unity
     guid: ce0a43876d9ede1479041938f88ff125
   - enabled: 1
-    path: Assets/Scenes/LoadingScene.unity
+    path: Assets/Scenes/UnusedScenes/LoadingScene.unity
     guid: d81edfeca93b80c4fbbba6f0cf503146
   - enabled: 1
-    path: Assets/Scenes/MainMenu.unity
+    path: Assets/Scenes/UnusedScenes/MainMenu.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
-    path: Assets/Scenes/Hints.unity
+    path: Assets/Scenes/UnusedScenes/Hints.unity
     guid: 0a4b13ab7749a40d8b574c91dc32f2c1
   - enabled: 1
-    path: Assets/Scenes/lobby.unity
+    path: Assets/Scenes/UnusedScenes/lobby.unity
     guid: f5494365f7184134d8f2442114a04370
   - enabled: 1
-    path: Assets/Scenes/ConfirmCamera.unity
+    path: Assets/Scenes/UnusedScenes/ConfirmCamera.unity
     guid: 60a81c24f2095bb48bce0ce0f1895470
   - enabled: 1
     path: Assets/Scenes/Maps/RedScene.unity

@@ -9,8 +9,9 @@ public class GeoCoordinate
     // Vector2d Location;
     // string Status;
 
-    public GeoCoordinate(string name, Vector2d location, string status, string hint1, string hint2, string hint3)
+    public GeoCoordinate( string name, Vector2d location, string status, string hint1, string hint2, string hint3)
     {
+        // ID = id;
         Name = name;
         Location = location;
         Status = status;
@@ -19,6 +20,7 @@ public class GeoCoordinate
         Hint3 = hint3;
     }
 
+    // public int ID {get; set; }
     public string Name { get; set; }
     public Vector2d Location { get; set; }
     public string Status { get; set; }

@@ -24,21 +24,16 @@ public class EventPointer : MonoBehaviour
     [SerializeField] float rotationSpeed = 50.0f;  // making it seialized allows the developer to access private variables through the inspector
     [SerializeField] float amplitude = 2.0f;
     [SerializeField] float frequency = 0.50f;
-    
-    // GameObject HintsFolder;// = GameObject.Find("HintsUI");
-
 
     // these two variables will be used for calculating the distance between the player and POI
     LocationStatus playerLocation;
     public Vector2d eventPos; // stores the Location of this POI, this is configured by SpawnOnMap component of EventSpawner
-
     MenuUIManager menuUIManager;
-
     EventManager eventManager; // gives us access to the EventManager for the game
-
     public int eventID;
-
     public static int currentEventID;
+
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -61,6 +56,10 @@ public class EventPointer : MonoBehaviour
         transform.position = new Vector3(transform.position.x, (Mathf.Sin(Time.fixedTime * Mathf.PI * frequency) * amplitude) + 15, transform.position.z);
     }
 
+    // public int getCurrID() {
+    //     return currentEventID;
+    // }
+
 
     private void OnMouseDown()
     {
@@ -75,6 +74,8 @@ public class EventPointer : MonoBehaviour
         var eventLocationLat = eventPos[0];
         var eventLocationLong = eventPos[1];
         currentEventID = eventID;
+
+        eventManager.setEventID(currentEventID);
 
         var distance = DistanceBetweenPlaces(playerLocationLat, playerLocationLong, eventLocationLat, eventLocationLong);
         
@@ -91,7 +92,7 @@ public class EventPointer : MonoBehaviour
             // HintsFolder.SetActive(true);
             eventManager.setPageActive(true);
             //menuUIManager.HideUserNotInRangePanel();
-            //menuUIManager.DisplayEventPanel(eventID); // pass the eventID assigned to this event
+           
             
         }
         else {
@@ -101,7 +102,7 @@ public class EventPointer : MonoBehaviour
         Debug.Log("\n\n\n");
         Debug.Log("clicked distance:" + distance);
 
-
+        // return currentEventID;
     }
 
 

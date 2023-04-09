@@ -1290,6 +1290,12 @@ MonoBehaviour:
   _locationStrings: []
   _spawnScale: 3
   _markerPrefab: {fileID: 5403540028488496363, guid: 7cb4fe9f35372f940afbd28dd725d3a4, type: 3}
+  _hint1Text: {fileID: 1568479705}
+  _button1: {fileID: 2008673172}
+  _hint2Text: {fileID: 1459589667}
+  _button2: {fileID: 708401638}
+  _hint3Text: {fileID: 1372734650}
+  _button3: {fileID: 698098944}
 --- !u!21 &355294680
 Material:
   serializedVersion: 8
@@ -2351,7 +2357,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 698098941}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 617769a7725314f44a8eb453a1f35eb7, type: 3}
   m_Name: 
@@ -2541,7 +2547,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 708401637}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 386fbe2e7f1234ab1a47281fef4674a5, type: 3}
   m_Name: 
@@ -9274,7 +9280,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2008673171}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4ba6097d84f7c4b7584acd78b114d876, type: 3}
   m_Name: 
@@ -9761,14 +9767,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2142990031}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -4, y: -27, z: 8.311473}
   m_LocalScale: {x: 537.819, y: 947.91907, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1915678991}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: -180, y: 0, z: 180}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2142990033
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -20,6 +20,7 @@ public class EventManager : MonoBehaviour
     double minimumDistanceToAccess = 100000000000;
     [SerializeField] GameObject HintsFolder;
     [SerializeField] Button back;
+    private int eventID;
 
     // Start is called before the first frame update
     void Start()
@@ -31,6 +32,14 @@ public class EventManager : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void setEventID(int e) {
+        eventID = e;
+    }
+
+    public int getEventID() {
+        return eventID;
     }
 
     public GameObject getHintsFolder()

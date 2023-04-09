@@ -55,7 +55,7 @@ namespace GameFramework.Core.GameFramework.Manager
         {
             while (true)
             {
-                Debug.Log("Hearthbeat");
+                // Debug.Log("Hearthbeat");
                 LobbyService.Instance.SendHeartbeatPingAsync(lobbyId);
                 yield return new WaitForSecondsRealtime(waitTimeSeconds);
             }
