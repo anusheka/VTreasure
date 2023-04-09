@@ -15,11 +15,15 @@ namespace Game
         
         int currentHuntID = EventPointer.currentEventID;
         
-        [SerializeField] public TextMeshProUGUI _hint1Text;
-        [SerializeField] public Button _button1;
-        [SerializeField] public TextMeshProUGUI _hint2Text;
-        [SerializeField] public Button _button2;
+        // [SerializeField] public TextMeshProUGUI _hint1Text;
+        // [SerializeField] public Button _button1;
+        // [SerializeField] public TextMeshProUGUI _hint2Text;
+        // [SerializeField] public Button _button2;
         [SerializeField] public Button _backButton;
+        [SerializeField] public Button _openCamera;
+        [SerializeField] public GameObject _cameraFolder;
+        [SerializeField] public GameObject _hintsFolder;
+
         private lobbyUI lobby;
         //[SerializeField] public TextMeshProUGUI _hint3Text;
 
@@ -35,6 +39,7 @@ namespace Game
             // _button1.onClick.AddListener(DisplayHint1);233
             // _button2.onClick.AddListener(DisplayHint2);
             _backButton.onClick.AddListener(OnBackButtonClicked);
+            _openCamera.onClick.AddListener(OpenCamera);
             
             
             //_hint1Text.text = POIList[currentHuntID-1].Hint1;
@@ -85,6 +90,11 @@ namespace Game
             
         }
 
+        public void OpenCamera() {
+            _cameraFolder.SetActive(true);
+            _hintsFolder.SetActive(false);
+        }
+
         // public void DisplayHint1() 
         // {
         //     //EventManager.ActivateEvent();
@@ -100,6 +110,9 @@ namespace Game
         private void OnBackButtonClicked()
         {
             // lobby.OnBackButtonClicked();
+            // SceneManager.LoadSceneAsync("Location-basedGame_backup");
+            _cameraFolder.SetActive(false);
+            _hintsFolder.SetActive(true);
         }
 
     }

@@ -1,13 +1,21 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
-
-// Mapbox library
+using Game.Events;
+using GameFramework.Core.Data;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+
+using System.Text.RegularExpressions;
+using Mapbox.Unity.Utilities;
+
+// Mapbox library
 using Mapbox.Examples; // this is for calculating the distance between player and POI
 using Mapbox.Examples.Scripts; // this is for calculating the distance between player and POI
 using Mapbox.Utils; // this is for calculating the distance between player and POI
 using UnityEngine.SceneManagement;
+// using HintsUI;
 
 public class EventPointer : MonoBehaviour
 {
@@ -16,6 +24,9 @@ public class EventPointer : MonoBehaviour
     [SerializeField] float rotationSpeed = 50.0f;  // making it seialized allows the developer to access private variables through the inspector
     [SerializeField] float amplitude = 2.0f;
     [SerializeField] float frequency = 0.50f;
+    
+    // GameObject HintsFolder;// = GameObject.Find("HintsUI");
+
 
     // these two variables will be used for calculating the distance between the player and POI
     LocationStatus playerLocation;
@@ -33,6 +44,8 @@ public class EventPointer : MonoBehaviour
     {
         menuUIManager = GameObject.Find("Canvas").GetComponent<MenuUIManager>();
         eventManager = GameObject.Find("EventManager").GetComponent<EventManager>();
+        // HintsFolder = GameObject.Find("HintsUI");
+        // HintsFolder = eventManager.getHintsFolder();
     }
 
     // Update is called once per frame
@@ -74,7 +87,9 @@ public class EventPointer : MonoBehaviour
 
         if (distance < eventManager.getMinimumDistanceToAccess())
         {
-            SceneManager.LoadSceneAsync("Hints");
+            // SceneManager.LoadSceneAsync("Hints");
+            // HintsFolder.SetActive(true);
+            eventManager.setPageActive(true);
             //menuUIManager.HideUserNotInRangePanel();
             //menuUIManager.DisplayEventPanel(eventID); // pass the eventID assigned to this event
             
