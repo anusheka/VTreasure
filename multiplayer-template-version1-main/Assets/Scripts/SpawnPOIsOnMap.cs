@@ -61,7 +61,7 @@ using System.Text.RegularExpressions;
 
         void Start()
         {
-             ReadFile();
+            POIList = ReadFile();
 
             eventManager = GameObject.Find("EventManager").GetComponent<EventManager>();
 
@@ -105,7 +105,7 @@ using System.Text.RegularExpressions;
             }
         }
 
-        private void ReadFile()
+        private GeoCoordinate[] ReadFile()
         {
             // Debug.Log("DH1 " + "About to start reading file");
             try
@@ -145,6 +145,7 @@ using System.Text.RegularExpressions;
                 // Debug.Log("DH1 " + "Exception in ReadFile " + e.ToString());
             }
             // Debug.Log("DH1 "+"Reading of POI File completed");
+            return POIList;
         }
 
         private void DisplayHint1() 

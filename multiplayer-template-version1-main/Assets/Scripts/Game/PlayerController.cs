@@ -87,18 +87,6 @@ public class PlayerController : NetworkBehaviour
             // spawnBallServerRPC();
             // }
         }
-        
-        //if (!IsOwner) return;
-        ///*if (Input.GetKey(KeyCode.T)) {  //click key code T -> it might do something 
-        //    randomNumber.Value = Random.Range(0, 100);
-        //}*/
-        //Vector3 moveDir = new Vector3(0, 0, 0); //figure out which direction it i sgoing move
-        //if (Input.GetKey(KeyCode.W)) moveDir.z = +1f; //this WASD listener 
-        //if (Input.GetKey(KeyCode.S)) moveDir.z = -1f;
-        //if (Input.GetKey(KeyCode.A)) moveDir.x = -1f;
-        //if (Input.GetKey(KeyCode.D)) moveDir.x = +1f;
-        //float moveSpeed = 3f;
-        //transform.position += moveDir * moveSpeed * Time.deltaTime;
     }
 
     private void RotateCamera(float lookInputY)
