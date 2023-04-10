@@ -90,7 +90,8 @@ namespace Game
             if (_lobbyData.RelayJoinCode != default && !_inGame)
             {
                 await JoinRelayServer(_lobbyData.RelayJoinCode);
-                SceneManager.LoadSceneAsync(_lobbyData.SceneName);
+                
+                // SceneManager.LoadSceneAsync(_lobbyData.SceneName);
             }
         }
         public List<LobbyPlayerData> GetPlayers()
