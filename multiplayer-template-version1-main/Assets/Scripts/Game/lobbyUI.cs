@@ -188,7 +188,7 @@ namespace Game
         // [ServerRpc]
         private void OnScoresButtonClicked()
         {
-            _scoresButton.gameObject.SetActive(false);
+            // _scoresButton.gameObject.SetActive(false);
             _leaderBoard.gameObject.SetActive(true);
             _backButton.gameObject.SetActive(true);
             _greyBackground.gameObject.SetActive(true);
@@ -207,7 +207,7 @@ namespace Game
         // [ServerRpc]
         public void OnBackButtonClicked()
         {
-            _scoresButton.gameObject.SetActive(true);
+            // _scoresButton.gameObject.SetActive(true);
             _leaderBoard.gameObject.SetActive(false);
             _backButton.gameObject.SetActive(false);
             _greyBackground.gameObject.SetActive(false);
