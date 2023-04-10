@@ -1,6 +1,7 @@
 Moss Arts Center 1, 37.231453320631964, -80.41770051972695, hint1, hint2, hint3
 Squires Student Center, Bowling Alley, 37.22962, -80.41796, Is your head in the ZONE yet?, Get your mind out of the gutter, This kind of thing is definitely not up your alley
 VA Tech Horticulture Garden, 37.219169, -80.424078, Is it a little humid in here?, This plant buds every 8 years!, Can you smell it? 
-McBryde Hall, 37.23062, -80.42178, Located on one, two...all the floors, Have you found the double doors?, Defying gravity in a Math building?
-Anusheka's, 37.24576, -80.41895, she's cool, she's here, come find her
-Panera, 37.23337, -80.43320, bread, bread, bread 
+McBryde Hall, 37.23062, -80.42178, Located on one two...all the floors, Have you found the double doors?, Defying gravity in a Math building?
+Lavery Hall, 37.23138262574614, -80.42281707346208, want some lunch?, open late (ish), don't forget a side of chips
+Torgeson Hall, 37.22993531396372, -80.42019327329047 , modeled after a submarine, no place to lounge around, get in line for office hours
+Holden Hall, 37.23046882781698, -80.4222235734621, new and improved, MSE and Mining live here, big lecture room
