@@ -61,9 +61,9 @@ namespace Game
             {
                 _leftButton.onClick.AddListener(OnLeftButtonClicked);
                 _rightButton.onClick.AddListener(OnRightButtonClicked);
-                _startButton.onClick.AddListener(OnStartButtonClicked);
                 LobbyEvents.OnLobbyReady += OnLobbyReady;
             }
+            _startButton.onClick.AddListener(OnStartButtonClicked);
             LobbyEvents.OnLobbyUpdated += OnLobbyUpdated;
         }
 
@@ -140,6 +140,7 @@ namespace Game
             if (succeed)
             {
                 _readyButton.gameObject.SetActive(false);
+                _startButton.gameObject.SetActive(true);
             }
         }
 

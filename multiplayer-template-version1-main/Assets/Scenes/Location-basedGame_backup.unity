@@ -9083,7 +9083,6 @@ MonoBehaviour:
   _leaderBoard: {fileID: 833819526}
   _startButton: {fileID: 718104006}
   _readyButton: {fileID: 1419693854}
-  _scoresButton: {fileID: 1226721166}
   _backButton: {fileID: 1490168312}
   _mapImage: {fileID: 593666492}
   _greyBackground: {fileID: 1288063794}
