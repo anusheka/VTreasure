@@ -38,7 +38,7 @@ public class CameraScript : MonoBehaviour
     void Start()
     {
         capture.onClick.AddListener(OnCaptureClicked);
-        _scoresButton.onClick.AddListener(OnScoreClicked);
+         _scoresButton.onClick.AddListener(OnScoreClicked);
         score = 0;
 
 
