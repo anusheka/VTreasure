@@ -8551,6 +8551,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   capture: {fileID: 784117212}
   rawimage: {fileID: 585026139}
+<<<<<<< HEAD
 --- !u!82 &1915678993
 AudioSource:
   m_ObjectHideFlags: 0
@@ -8647,6 +8648,10 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+=======
+  scoreText: {fileID: 57749023}
+  _scoresButton: {fileID: 1226721166}
+>>>>>>> 928622d7c6795aac3013f2823f519a7a3e5a4d79
 --- !u!1 &1952851116
 GameObject:
   m_ObjectHideFlags: 0
@@ -9180,6 +9185,7 @@ MonoBehaviour:
   _leaderBoard: {fileID: 833819526}
   _startButton: {fileID: 718104006}
   _readyButton: {fileID: 1419693854}
+  _scoresButton: {fileID: 1226721166}
   _backButton: {fileID: 1490168312}
   _mapImage: {fileID: 593666492}
   _greyBackground: {fileID: 1288063794}
