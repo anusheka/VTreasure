@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028334, g: 0.22571328, b: 0.3069217, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -8551,6 +8551,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   capture: {fileID: 784117212}
   rawimage: {fileID: 585026139}
+  scoreText: {fileID: 57749023}
+  _scoresButton: {fileID: 1226721166}
 --- !u!82 &1915678993
 AudioSource:
   m_ObjectHideFlags: 0
@@ -9180,6 +9182,7 @@ MonoBehaviour:
   _leaderBoard: {fileID: 833819526}
   _startButton: {fileID: 718104006}
   _readyButton: {fileID: 1419693854}
+  _scoresButton: {fileID: 1226721166}
   _backButton: {fileID: 1490168312}
   _mapImage: {fileID: 593666492}
   _greyBackground: {fileID: 1288063794}

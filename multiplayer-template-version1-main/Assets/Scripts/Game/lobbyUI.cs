@@ -21,7 +21,7 @@ namespace Game
         [SerializeField] private TextMeshProUGUI _leaderBoard;
         [SerializeField] private Button _startButton;
         [SerializeField] private Button _readyButton;
-        // [SerializeField] private Button _scoresButton;
+        [SerializeField] private Button _scoresButton;
         [SerializeField] private Button _backButton;
         [SerializeField] private Image _mapImage;
         [SerializeField] private Image _greyBackground;
@@ -54,7 +54,7 @@ namespace Game
         private void OnEnable()
         {
             _readyButton.onClick.AddListener(OnReadyPressed);
-            // _scoresButton.onClick.AddListener(OnScoresButtonClicked);
+            _scoresButton.onClick.AddListener(OnScoresButtonClicked);
             _backButton.onClick.AddListener(OnBackButtonClicked);
 
             if (GameLobbyManager.Instance.IsHost)
@@ -73,7 +73,7 @@ namespace Game
             _leftButton.onClick.RemoveAllListeners();
             _rightButton.onClick.RemoveAllListeners();
             _startButton.onClick.RemoveAllListeners();
-            // _scoresButton.onClick.RemoveAllListeners();
+            _scoresButton.onClick.RemoveAllListeners();
             _backButton.onClick.RemoveAllListeners();
             LobbyEvents.OnLobbyUpdated -= OnLobbyUpdated;
             LobbyEvents.OnLobbyReady -= OnLobbyReady;
@@ -167,7 +167,7 @@ namespace Game
         // [ServerRpc]
         private void OnStartButtonClicked()
         {
-            // _scoresButton.gameObject.SetActive(true);
+            _scoresButton.gameObject.SetActive(true);
             _startButton.gameObject.SetActive(false);
             _lobbyCodeText.gameObject.SetActive(false);
             _greyBackground.gameObject.SetActive(false);
@@ -189,7 +189,7 @@ namespace Game
         // [ServerRpc]
         private void OnScoresButtonClicked()
         {
-            // _scoresButton.gameObject.SetActive(false);
+            _scoresButton.gameObject.SetActive(false);
             _leaderBoard.gameObject.SetActive(true);
             _backButton.gameObject.SetActive(true);
             _greyBackground.gameObject.SetActive(true);
@@ -201,14 +201,14 @@ namespace Game
             // RpcSetObjectActive(_greyBackground, true);
             // RpcSetObjectActive(_startButton, false);
 
-            _scoreText.text = $"{GameLobbyManager.Instance.GetScoreText()}";
+            // _scoreText.text = $"{GameLobbyManager.Instance.GetScoreText()}";
 
         }
 
         // [ServerRpc]
         public void OnBackButtonClicked()
         {
-            // _scoresButton.gameObject.SetActive(true);
+            _scoresButton.gameObject.SetActive(true);
             _leaderBoard.gameObject.SetActive(false);
             _backButton.gameObject.SetActive(false);
             _greyBackground.gameObject.SetActive(false);
