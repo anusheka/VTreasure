@@ -261,7 +261,7 @@ GameObject:
   - component: {fileID: 57749023}
   - component: {fileID: 57749026}
   m_Layer: 5
-  m_Name: ScoresList
+  m_Name: MyScore
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -314,8 +314,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 66.49
+  m_fontSizeBase: 66.49
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -350,7 +350,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 99.61691, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -379,10 +379,10 @@ RectTransform:
   m_Father: {fileID: 1994941927}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 49.999996, y: 57}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: -500}
+  m_SizeDelta: {x: -200, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &57749026
 MonoBehaviour:
@@ -3586,8 +3586,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Player              Score              Rank\nPlayer 1    \nPlayer 2\nPlayer
-    3\nPlayer 4"
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -8945,6 +8944,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   capture: {fileID: 784117212}
   rawimage: {fileID: 585026139}
+  scoreText: {fileID: 57749023}
+  _scoresButton: {fileID: 1226721166}
 --- !u!1 &1952851116
 GameObject:
   m_ObjectHideFlags: 0
@@ -9461,6 +9462,7 @@ MonoBehaviour:
   _leaderBoard: {fileID: 833819526}
   _startButton: {fileID: 718104006}
   _readyButton: {fileID: 1419693854}
+  _scoresButton: {fileID: 1226721166}
   _backButton: {fileID: 1490168312}
   _mapImage: {fileID: 593666492}
   _greyBackground: {fileID: 1288063794}
@@ -9908,7 +9910,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: LeaderBoard
+  m_text: View My Score
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
