@@ -4,4 +4,3 @@ McBryde Hall, 37.23062, -80.42178, Located on one two...all the floors, Have you
 Lavery Hall, 37.23138262574614, -80.42281707346208, want some lunch?, open late (ish), don't forget a side of chips
 Torgeson Hall, 37.22993531396372, -80.42019327329047 , modeled after a submarine, no place to lounge around, get in line for office hours
 Holden Hall, 37.23046882781698, -80.4222235734621, new and improved, MSE and Mining live here, big lecture room
-Anusheka's, 37.24576, -80.41895, she's cool, she's here, come find her

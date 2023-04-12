@@ -26,14 +26,20 @@ public class CameraScript : MonoBehaviour
     // Start is called before the first frame update
     [SerializeField] private Button capture;
     [SerializeField] public RawImage rawimage;
+    [SerializeField] private TextMeshProUGUI scoreText;
+    [SerializeField] private Button _scoresButton;
     // private CameraCallback callback;
     private static NCCameraCallbackiOS instance;
 	private NativeCamera.CameraCallback callback;
+
+    private int score;
 
 
     void Start()
     {
         capture.onClick.AddListener(OnCaptureClicked);
+        _scoresButton.onClick.AddListener(OnScoreClicked);
+        score = 0;
 
 
         if (backCam == null)
@@ -73,9 +79,19 @@ public class CameraScript : MonoBehaviour
     }
 
 
+    public void OnScoreClicked() {
+        scoreText.gameObject.SetActive(true);
+        scoreText.text = $"My Score: {score.ToString()}";
+         Debug.Log(score);
+    }
+
+
     //https://github.com/yasirkula/UnityNativeCamera
     public void OnCaptureClicked() {
         int maxSize = 512;
+        score++;
+
+        Debug.Log(score);
 
         // NativeCamera.Permission permission = NativeCamera.TakePicture( ( path ) =>
         // {
