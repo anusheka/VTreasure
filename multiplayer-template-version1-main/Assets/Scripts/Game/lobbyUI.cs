@@ -178,7 +178,7 @@ namespace Game
             // RpcSetObjectActive(_startButton, false);
 
             GameStartedServerRpc(true);
-
+            
             StartGame();
         }
 
